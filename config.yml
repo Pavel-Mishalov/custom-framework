@@ -1,0 +1,7 @@
+webpack:
+  entry: 'app.js'
+  resolve:
+    alias:
+      test: './test'
+  output:
+    filename: "bundle-[hash].js"

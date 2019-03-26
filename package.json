@@ -1,22 +1,48 @@
 {
-  "scripts": {
-    "start": "webpack-dev-server --hot --inline --progress --colors",
-    "build": "NODE_ENV=production webpack --progress --colors --optimize-minimize"
+  "name": "custom-framework",
+  "version": "0.0.1",
+  "description": "Components framework",
+  "main": "index.js",
+  "dependencies": {
+    "js-yaml": "^3.13.0",
+    "node-html-parser": "^1.1.13",
+    "raw-loader": "^2.0.0",
+    "require-context": "^1.1.0",
+    "virtual-dom": "^2.1.1"
   },
   "devDependencies": {
-    "babel-core": "^5.8.19",
-    "babel-loader": "^5.3.2",
-    "compression-webpack-plugin": "^0.2.0",
-    "css-loader": "^0.15.6",
-    "file-loader": "^0.8.4",
-    "html-webpack-plugin": "^1.6.0",
-    "node-sass": "^3.2.0",
-    "react": "^0.13.3",
-    "react-hot-loader": "^1.2.8",
-    "react-router": "^0.13.3",
-    "sass-loader": "^1.0.3",
-    "style-loader": "^0.12.3",
-    "webpack": "^1.10.5",
-    "webpack-dev-server": "^1.10.1"
-  }
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "css-loader": "^2.1.1",
+    "file-loader": "^3.0.1",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.2.1"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --config build/webpack/index.js --hot --inline --progress --colors",
+    "test": "node index.js --test",
+    "build": "NODE_ENV=production webpack --config build/webpack/index.js --progress --colors --optimize-minimize --display-error-details"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Pavel-Mishalov/custom-framework.git"
+  },
+  "keywords": [
+    "webpack",
+    "custom",
+    "framework",
+    "es",
+    "js"
+  ],
+  "author": "Mishalov Pavel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pavel-Mishalov/custom-framework/issues"
+  },
+  "homepage": "https://github.com/Pavel-Mishalov/custom-framework#readme"
 }
